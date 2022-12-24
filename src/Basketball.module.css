@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    border: solid black 2px
+}
+
+@keyframes box1 {
+    from {
+        transform: translate(0px,0px);
+        border-radius: 86% 14% 68% 32% / 23% 74% 26% 77%;
+        background-color: red;
+    }
+    50% {
+        transform: translate(300px,300px);
+        border-radius: 59% 41% 30% 70% / 67% 32% 68% 33%;
+        background-color: yellow;
+    }
+    to {
+        transform: translate(0px,0px);
+        border-radius: 86% 14% 68% 32% / 23% 74% 26% 77%;
+        background-color: red;
+    }
+}
+
+.basketball {
+    display: block;
+    position: relative;
+    transform: translateY(0);
+    height: 100px;
+    width: 100px;
+    border: solid black 0px;
+    border-radius: 50%;
+    background-color: orange;
+    overflow: hidden;
+    z-index: -1;
+    animation-name: basketball;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.leftLine {
+    position: absolute;
+    left: -70%;
+    height: 100px;
+    width: 100%;
+    border: solid black 2px;
+    border-radius: 50%;
+}
+
+.centerVLine {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 0;
+    width: 100px;
+    border: solid black 1px;
+}
+.centerHLine {
+    position: absolute;
+    left: 50%;
+    height: 100px;
+    width: 0;
+    border: solid black 1px;
+}
+
+.rightLine {
+    position: absolute;
+    left: 70%;
+    height: 100px;
+    width: 100%;
+    border: solid black 2px;
+    border-radius: 50%;
+}
+
+@keyframes basketball {
+    from {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
